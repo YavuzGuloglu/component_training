@@ -1,0 +1,136 @@
+.drawer {
+  position: fixed;
+  background-color: white;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+  transform: translateX(100%);
+  padding: 10px;
+  z-index: 999;
+
+  &.small {
+    width: 324px;
+  }
+  &.medium {
+    width: 568px;
+  }
+  &.large {
+    width: 812px;
+  }
+
+  &.slide-in {
+    animation: slide-in 0.5s forwards;
+  }
+  @keyframes slide-in {
+    100% {
+      transform: translateX(0%);
+    }
+  }
+}
+
+.circle-close {
+  display: flex;
+  cursor: pointer;
+}
+
+.drawer-title {
+  display: flex;
+  padding-bottom: 10px;
+  &.scroll-title {
+    border-bottom: 1px solid #00000017;
+  }
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 20px;
+  color: black;
+  font-size: 24px;
+  font-weight: 600;
+  animation: drawer-title-sizing 0.3s;
+
+  @keyframes drawer-title-sizing {
+    from {
+      font-size: 24px;
+    }
+  }
+}
+.show-title {
+  @extend .title;
+  transition: ease-in 0.5s;
+  font-size: 18px;
+  transition: all 1s ease-out;
+}
+
+.drawer-body {
+  height: 500px;
+  overflow: auto;
+  -ms-overflow-style: none;
+  height: 88%;
+  padding: 2px;
+
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  background: linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+    linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(
+      farthest-side at 50% 0,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0)
+    ),
+    radial-gradient(
+        farthest-side at 50% 100%,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0)
+      )
+      0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+.drawer-footer {
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  &.left {
+    justify-content: left;
+  }
+  &.right {
+    justify-content: right;
+    padding-right: 20px;
+  }
+  &.center {
+    justify-content: center;
+  }
+}
+.button-right {
+  padding-right: 10px;
+}
+
+.background {
+  background: #00000080;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  animation: background-in 0.2s ease-in;
+
+  @keyframes background-in {
+    from {
+      background-color: transparent;
+    }
+    to {
+      background-color: #00000080;
+    }
+  }
+}

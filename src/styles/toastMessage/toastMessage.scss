@@ -1,0 +1,148 @@
+$white: #fff;
+$error: #fee0e0;
+$info: #f4f6ff;
+$green: #ebf9ec;
+$yellow: #fffae9;
+$dark-yellow: #f5cf3f;
+$dark-green: #5ad363;
+$dark-red: #fa3f3f;
+$dark-blue: #6c84fa;
+$black-100: #484848;
+
+@mixin color($bgcolor) {
+  background-color: $bgcolor;
+}
+
+.toast-container {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.toast {
+  width: 326px;
+  padding: 0 16px 0 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.08);
+  display: flex;
+  overflow: hidden;
+  transition: 0.3s ease;
+  margin-bottom: 15px;
+  animation: toast-in-right 0.7s;
+  &.error {
+    @include color($error);
+    .front-toast {
+      width: 8px;
+      background-color: $dark-red;
+      @media (max-width: 980px) {
+        background-color: $white;
+      }
+    }
+    .link-toast {
+      color: $dark-red;
+      text-decoration: none;
+    }
+    @media (max-width: 980px) {
+      @include color($white);
+    }
+  }
+  &.info {
+    @include color($info);
+    .front-toast {
+      width: 8px;
+      background-color: $dark-blue;
+      @media (max-width: 980px) {
+        background-color: $white;
+      }
+    }
+    .link-toast {
+      color: $dark-blue;
+      text-decoration: none;
+    }
+    @media (max-width: 980px) {
+      @include color($white);
+    }
+  }
+  &.success {
+    @include color($green);
+    .front-toast {
+      width: 8px;
+      background-color: $dark-green;
+      @media (max-width: 980px) {
+        background-color: $white;
+      }
+    }
+    .link-toast {
+      color: $dark-green;
+      text-decoration: none;
+    }
+    @media (max-width: 980px) {
+      @include color($white);
+    }
+  }
+  &.warning {
+    @include color($yellow);
+    .front-toast {
+      width: 8px;
+      background-color: $dark-yellow;
+      @media (max-width: 980px) {
+        background-color: $white;
+      }
+    }
+    .link-toast {
+      color: $dark-yellow;
+      text-decoration: none;
+    }
+    @media (max-width: 980px) {
+      @include color($white);
+    }
+  }
+}
+
+.col-toast-text {
+  width: 90%;
+  padding: 10px;
+  min-height: 56px;
+  color: $black-100;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  &.single {
+    align-items: center;
+  }
+  .icon-toast {
+    margin-right: 10px;
+    display: flex;
+    @media (max-width: 980px) {
+      @include color($white);
+    }
+  }
+  .text-toast {
+    text-align: left;
+  }
+  .description-toast {
+    color: $black-100;
+    font-weight: 400;
+    font-size: 14px;
+    display: flex;
+    padding-top: 10px;
+  }
+  .link-div {
+    margin-top: 10px;
+    text-align: left;
+  }
+}
+
+.close-toast {
+  cursor: pointer;
+}
+
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

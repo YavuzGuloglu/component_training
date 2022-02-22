@@ -1,0 +1,210 @@
+$initial-color: #fff;
+// Disabled Colors
+$disabled: #cccccc;
+$disabled-text: #919191;
+// Primary - Secondary Colors
+$orange: #ff6000;
+$orange-hover: #e35600;
+$orange-active: #cc4d00;
+// Tertiary Colors
+$cornflowers: #6c84fa;
+$cornflowers-hover: #5163bb;
+$cornflowers-active: #3c4a8c;
+//Ghost Colors
+$black-100: #484848;
+$orange-100: #c25700;
+// UI Buttons Colors
+$fire-engeine-red: #f90000;
+$fire-engeine-red-60-hover: #ba0000;
+$fire-engeine-red-70-active: #8c0000;
+$lightish-green: #5ad363;
+$lightish-green-60-hover: #439e4a;
+$lightish-green-70-active: #327637;
+
+@mixin color(
+  $textcolor,
+  $textcolorhover,
+  $bgcolor,
+  $bghovercolor,
+  $bgactivecolor,
+  $disabledbgcolor,
+  $disabledtextcolor
+) {
+  background-color: $bgcolor;
+  color: $textcolor;
+  .button-icon * {
+    fill: $textcolor;
+  }
+  &:hover {
+    background-color: $bghovercolor;
+    color: $textcolorhover;
+    .button-icon * {
+      fill: $textcolorhover;
+    }
+  }
+  &:active {
+    background-color: $bgactivecolor;
+    .button-icon * {
+      fill: $textcolorhover;
+    }
+  }
+  &:disabled {
+    background-color: $disabledbgcolor;
+    color: $disabledtextcolor;
+    .button-icon * {
+      fill: $disabledtextcolor;
+    }
+  }
+}
+.button {
+  border-radius: 8px;
+  cursor: pointer;
+  height: 48px;
+  border: none;
+  margin-bottom: 5px;
+  display: inline-flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  label {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .icon-position-left {
+    order: -1;
+    padding-right: 8px;
+  }
+  .icon-position-right {
+    order: 2;
+    padding-left: 8px;
+  }
+  // COLOR TYPES
+  &.primary {
+    @include color(
+      $initial-color,
+      $initial-color,
+      $orange,
+      $orange-hover,
+      $orange-active,
+      $disabled,
+      $disabled-text
+    );
+  }
+  &.secondary {
+    @include color(
+      $orange,
+      $orange,
+      rgba($orange, 0.08),
+      rgba($orange, 0.12),
+      rgba($orange, 0.2),
+      $disabled,
+      $disabled-text
+    );
+  }
+  &.tertiary {
+    @include color(
+      $initial-color,
+      $initial-color,
+      $cornflowers,
+      $cornflowers-hover,
+      $cornflowers-active,
+      $disabled,
+      $disabled-text
+    );
+  }
+  &.ghost {
+    @include color(
+      $black-100,
+      $orange,
+      $initial-color,
+      $initial-color,
+      $initial-color,
+      2px solid $disabled,
+      $disabled-text
+    );
+    border: 1px solid $disabled-text;
+  }
+  &.link-ghost {
+    @include color(
+      $black-100,
+      $orange,
+      $initial-color,
+      $initial-color,
+      $initial-color,
+      2px solid $disabled,
+      $disabled-text
+    );
+  }
+  &.link-primary {
+    @include color(
+      $orange,
+      $orange-100,
+      $initial-color,
+      $initial-color,
+      $initial-color,
+      2px solid $disabled,
+      $disabled-text
+    );
+  }
+  &.danger {
+    @include color(
+      $initial-color,
+      $initial-color,
+      $fire-engeine-red,
+      $fire-engeine-red-60-hover,
+      $fire-engeine-red-70-active,
+      $disabled,
+      $disabled-text
+    );
+  }
+  &.success {
+    @include color(
+      $initial-color,
+      $initial-color,
+      $lightish-green,
+      $lightish-green-60-hover,
+      $lightish-green-70-active,
+      $disabled,
+      $disabled-text
+    );
+  }
+  // SIZE
+  &.tiny {
+    height: 32px;
+    label {
+      font-size: 12px;
+    }
+    .button-icon * {
+      width: 16px;
+    }
+  }
+  &.small {
+    height: 40px;
+    label {
+      font-size: 14px;
+    }
+    .button-icon * {
+      width: 20px;
+    }
+  }
+  &.default {
+    height: 48px;
+    label {
+      font-size: 16px;
+    }
+    .button-icon * {
+      width: 24px;
+    }
+  }
+  &.large {
+    height: 56px;
+    width: 140px;
+    label {
+      font-size: 16px;
+    }
+    .button-icon * {
+      width: 25px;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+$black-20: #eeeeee;
+
+.seg-div {
+  background-color: $black-20;
+  padding: 2px;
+  border-radius: 8px;
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  &.fluid {
+    width: 100%;
+  }
+  .seg-button {
+    padding: 10px;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    height: 44px;
+    flex: auto;
+    &.active {
+      position: absolute;
+      background-color: #fff;
+      border-radius: 8px;
+      transition: all 0.5s ease;
+    }
+    &.small {
+      height: 36px;
+      font-size: 14px;
+    }
+    &.tiny {
+      height: 28px;
+      font-size: 12px;
+    }
+  }
+}
+
+.seg-text {
+  z-index: 999;
+}

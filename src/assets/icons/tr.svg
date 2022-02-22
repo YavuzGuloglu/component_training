@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="22px" viewBox="0 0 21 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>6242316A-7265-4D84-B70B-A2FCEA9283DD</title>
+    <g id="Components" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Inputs" transform="translate(-206.000000, -1778.000000)">
+            <g id="Group" transform="translate(0.000000, 1370.000000)">
+                <g id="Component-/-Input-/-Large-/-GSM-/-Error" transform="translate(194.000000, 390.000000)">
+                    <g id="Left-Icon" transform="translate(12.000000, 18.083333)">
+                        <g id="Icon-/-_Flag-/-TR">
+                            <rect id="Base" fill-opacity="0" fill="#FFFFFF" opacity="0" x="0" y="0" width="21" height="21"></rect>
+                            <g id="Group" transform="translate(0.000000, 3.062500)">
+                                <rect id="Bg" fill="#E92434" x="0" y="0" width="21" height="14.875" rx="2"></rect>
+                                <path d="M9.5,3 C10.9432271,3 12.2277692,3.67941107 13.0512357,4.73584248 C12.4155874,4.27471789 11.6171672,4 10.75,4 C8.67893219,4 7,5.56700338 7,7.5 C7,9.43299662 8.67893219,11 10.75,11 C11.6171672,11 12.4155874,10.7252821 13.0508034,10.2640064 C12.2277692,11.3205889 10.9432271,12 9.5,12 C7.01471863,12 5,9.98528137 5,7.5 C5,5.01471863 7.01471863,3 9.5,3 Z M14.0143352,5.32935276 L14.4728077,6.69831948 L15.9164482,6.71131877 L14.7561593,7.57038603 L15.1899057,8.94738675 L14.0143352,8.10935279 L12.8387647,8.94738675 L13.2725111,7.57038603 L12.1122222,6.71131877 L13.5558627,6.69831948 L14.0143352,5.32935276 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

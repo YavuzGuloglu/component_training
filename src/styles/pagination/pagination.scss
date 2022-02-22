@@ -1,0 +1,23 @@
+.pagination-item {
+  font-weight: 500;
+  font-size: 14px;
+  margin-right: 10px;
+  padding: 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  cursor: pointer;
+  &.active {
+    color: #ff6000;
+  }
+}
+
+.pagination-position {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-item-dots {
+  margin-right: 10px;
+}
